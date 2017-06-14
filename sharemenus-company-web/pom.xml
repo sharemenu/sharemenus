@@ -8,4 +8,173 @@
   </parent>
   <artifactId>sharemenus-company-web</artifactId>
   <packaging>war</packaging>
+  
+  
+   <dependencies>
+            <!-- dubboX -->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>dubbo</artifactId>
+            </dependency>
+
+            <!-- Spring dependencies -->
+        	<dependency>
+            	<groupId>org.springframework</groupId>
+            	<artifactId>spring-core</artifactId>
+        	</dependency>
+        	<dependency>
+            	<groupId>org.springframework</groupId>
+            	<artifactId>spring-context</artifactId>
+        	</dependency>
+        	<dependency>
+            	<groupId>org.springframework</groupId>
+            	<artifactId>spring-context-support</artifactId>
+        	</dependency>
+        	<dependency>
+            	<groupId>org.springframework</groupId>
+            	<artifactId>spring-webmvc</artifactId>
+        	</dependency>
+        	<dependency>
+            	<groupId>org.springframework</groupId>
+            	<artifactId>spring-web</artifactId>
+        	</dependency>
+        	<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-test</artifactId>
+			</dependency>
+
+            <!-- mybatis -->
+            <dependency>
+                <groupId>org.mybatis</groupId>
+                <artifactId>mybatis</artifactId>
+            </dependency>
+            <dependency>
+                <groupId>org.mybatis</groupId>
+                <artifactId>mybatis-spring</artifactId>
+            </dependency>
+
+            <!-- mysql -->
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+            </dependency>
+
+            <!-- fastJson -->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+            </dependency>
+          
+			<dependency>
+				<groupId>javax.servlet</groupId>
+				<artifactId>jstl</artifactId>
+			</dependency>
+			<dependency>
+				<groupId>javax.servlet</groupId>
+				<artifactId>javax.servlet-api</artifactId>
+				<scope>provided</scope>
+			</dependency>
+			<dependency>
+            	<groupId>javax.servlet</groupId>
+            	<artifactId>servlet-api</artifactId>
+            	<scope>provided</scope>
+        	</dependency>
+			<dependency>
+				<groupId>javax.servlet.jsp</groupId>
+				<artifactId>jsp-api</artifactId>
+				<scope>provided</scope>
+			</dependency>
+
+            <!-- apache commons -->
+            <dependency>
+                <groupId>commons-beanutils</groupId>
+                <artifactId>commons-beanutils</artifactId>
+            </dependency>
+            <dependency>
+                <groupId>commons-lang</groupId>
+                <artifactId>commons-lang</artifactId>
+            </dependency>
+            <dependency>
+                <groupId>commons-dbcp</groupId>
+                <artifactId>commons-dbcp</artifactId>
+            </dependency>
+ 			
+ 			<!-- 解决jdk8字节码问题 -->
+            <dependency>
+				<groupId>org.javassist</groupId>
+				<artifactId>javassist</artifactId>
+			</dependency>
+			
+			<!-- POI Export Excel -->
+        	<dependency>
+		    	<groupId>org.apache.poi</groupId>
+		    	<artifactId>poi-ooxml</artifactId>
+	   		</dependency>
+			
+            <!-- log4j & slf4j -->
+            <dependency>
+                <groupId>log4j</groupId>
+                <artifactId>log4j</artifactId>
+                <exclusions>
+                    <exclusion>
+                        <groupId>javax.mail</groupId>
+                        <artifactId>mail</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>javax.jms</groupId>
+                        <artifactId>jms</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>com.sun.jdmk</groupId>
+                        <artifactId>jmxtools</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>com.sun.jmx</groupId>
+                        <artifactId>jmxri</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>oro</groupId>
+                        <artifactId>oro</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-api</artifactId>
+            </dependency>
+	  		<dependency>
+				<groupId>javax.validation</groupId>
+				<artifactId>validation-api</artifactId>
+			</dependency>
+	  		<dependency>
+				<groupId>javax.annotation</groupId>
+				<artifactId>javax.annotation-api</artifactId>
+			</dependency>
+			<dependency>
+		   		<groupId>junit</groupId>
+		   		<artifactId>junit</artifactId>
+	   		</dependency>
+	   		<dependency>
+			   <groupId>org.sitemesh</groupId>
+			   <artifactId>sitemesh</artifactId>
+			</dependency>
+			
+			
+			<dependency>
+            	<groupId>com.fasterxml.jackson.core</groupId>
+            	<artifactId>jackson-core</artifactId>
+        	</dependency>
+        	<dependency>
+            	<groupId>com.fasterxml.jackson.core</groupId>
+            	<artifactId>jackson-databind</artifactId>
+        	</dependency>
+        	<dependency>
+            	<groupId>com.fasterxml.jackson.core</groupId>
+            	<artifactId>jackson-annotations</artifactId>
+        	</dependency>
+        	<dependency>
+                <groupId>org.hibernate</groupId>
+                <artifactId>hibernate-validator</artifactId>
+            </dependency>
+        </dependencies> 
 </project>
