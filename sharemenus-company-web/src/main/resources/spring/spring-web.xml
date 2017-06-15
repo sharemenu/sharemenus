@@ -11,6 +11,18 @@
 	<!-- 开启注解 -->
 	<mvc:annotation-driven />
 	
+	<bean id="myPropertiesBean"
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="locations">
+			<list>
+				<value>classpath:prop/application.properties</value>
+			</list>
+		</property>
+	</bean>
+	
+	<import resource="classpath:spring/spring-dubbo.xml" />
+	<import resource="classpath:spring/spring-ref.xml" />
+	
     <!-- 设置controller注解解析 -->
     <context:component-scan base-package="com.sharemenu.company.controller" use-default-filters="false">
 	    <context:include-filter type="annotation" expression="org.springframework.stereotype.Controller" />  
@@ -21,6 +33,9 @@
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver"
 		  p:prefix="/WEB-INF/pages/"
 		  p:suffix=".jsp"/>
+		  
+		  
+	
     
  
 </beans>

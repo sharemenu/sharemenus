@@ -7,4 +7,44 @@
     <relativePath>..</relativePath>
   </parent>
   <artifactId>sharemenus-support</artifactId>
+  
+  <dependencies>
+        <dependency>
+            <groupId>com.sharemenus</groupId>
+            <artifactId>sharemenus-api</artifactId>
+            <version>${sharemenus.api.version}</version>
+        </dependency>
+         <dependency>
+            <groupId>com.sharemenus</groupId>
+            <artifactId>sharemenus-company-support</artifactId>
+             <version>${project.parent.version}</version>
+        </dependency>
+
+    </dependencies>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-shade-plugin</artifactId>
+                <version>1.4</version>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>shade</goal>
+                        </goals>
+                        <configuration>
+                            <createSourcesJar>true</createSourcesJar>
+                            <promoteTransitiveDependencies>true</promoteTransitiveDependencies>
+                            <artifactSet>
+                                <includes>
+                                    <include>com.sharemenus:sharemenus-company-support</include>
+                                </includes>
+                            </artifactSet>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
 </project>

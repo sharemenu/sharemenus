@@ -7,4 +7,11 @@
     <relativePath>..</relativePath>
   </parent>
   <artifactId>sharemenus-api</artifactId>
+  <version>${sharemenus.api.version}</version>
+  <dependencies>
+        <dependency>
+            <groupId>commons-lang</groupId>
+            <artifactId>commons-lang</artifactId>
+        </dependency>
+  </dependencies>
 </project>

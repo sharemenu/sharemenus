@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+		http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+    <!--在虚拟机环境或多网卡场景下可能需要添加host="${dubbo.host}"属性-->
+    <dubbo:protocol name="dubbo" port="${dubbo.port}"/>
+
+    <!-- 测试服务 -->
+    <dubbo:service 
+      		interface="com.sharemenu.company.service.TestService" 
+      		ref="testServiceImpl" 
+      		group="testService"
+  			protocol="dubbo"  
+  			timeout="5000" 
+  			retries="0" />
+ 
+</beans>

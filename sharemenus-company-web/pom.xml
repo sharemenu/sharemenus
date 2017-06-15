@@ -1,180 +1,266 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <parent>
-    <artifactId>sharemenus</artifactId>
-    <groupId>com.sharemenus</groupId>
-    <version>1.0-SNAPSHOT</version>
-    <relativePath>..</relativePath>
-  </parent>
-  <artifactId>sharemenus-company-web</artifactId>
-  <packaging>war</packaging>
-  
-  
-   <dependencies>
-            <!-- dubboX -->
-            <dependency>
-                <groupId>com.alibaba</groupId>
-                <artifactId>dubbo</artifactId>
-            </dependency>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<artifactId>sharemenus</artifactId>
+		<groupId>com.sharemenus</groupId>
+		<version>1.0-SNAPSHOT</version>
+		<relativePath>..</relativePath>
+	</parent>
+	<artifactId>sharemenus-company-web</artifactId>
+	<packaging>war</packaging>
 
-            <!-- Spring dependencies -->
-        	<dependency>
-            	<groupId>org.springframework</groupId>
-            	<artifactId>spring-core</artifactId>
-        	</dependency>
-        	<dependency>
-            	<groupId>org.springframework</groupId>
-            	<artifactId>spring-context</artifactId>
-        	</dependency>
-        	<dependency>
-            	<groupId>org.springframework</groupId>
-            	<artifactId>spring-context-support</artifactId>
-        	</dependency>
-        	<dependency>
-            	<groupId>org.springframework</groupId>
-            	<artifactId>spring-webmvc</artifactId>
-        	</dependency>
-        	<dependency>
-            	<groupId>org.springframework</groupId>
-            	<artifactId>spring-web</artifactId>
-        	</dependency>
-        	<dependency>
-				<groupId>org.springframework</groupId>
-				<artifactId>spring-test</artifactId>
-			</dependency>
 
-            <!-- mybatis -->
-            <dependency>
-                <groupId>org.mybatis</groupId>
-                <artifactId>mybatis</artifactId>
-            </dependency>
-            <dependency>
-                <groupId>org.mybatis</groupId>
-                <artifactId>mybatis-spring</artifactId>
-            </dependency>
+	<dependencies>
+		<!-- dubboX -->
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>dubbo</artifactId>
+		</dependency>
 
-            <!-- mysql -->
-            <dependency>
-                <groupId>mysql</groupId>
-                <artifactId>mysql-connector-java</artifactId>
-            </dependency>
+		<!-- Spring dependencies -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-core</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context-support</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-web</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
+		</dependency>
 
-            <!-- fastJson -->
-            <dependency>
-                <groupId>com.alibaba</groupId>
-                <artifactId>fastjson</artifactId>
-            </dependency>
-          
-			<dependency>
-				<groupId>javax.servlet</groupId>
-				<artifactId>jstl</artifactId>
-			</dependency>
-			<dependency>
-				<groupId>javax.servlet</groupId>
-				<artifactId>javax.servlet-api</artifactId>
-				<scope>provided</scope>
-			</dependency>
-			<dependency>
-            	<groupId>javax.servlet</groupId>
-            	<artifactId>servlet-api</artifactId>
-            	<scope>provided</scope>
-        	</dependency>
-			<dependency>
-				<groupId>javax.servlet.jsp</groupId>
-				<artifactId>jsp-api</artifactId>
-				<scope>provided</scope>
-			</dependency>
+		<!-- mybatis -->
+		<dependency>
+			<groupId>org.mybatis</groupId>
+			<artifactId>mybatis</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.mybatis</groupId>
+			<artifactId>mybatis-spring</artifactId>
+		</dependency>
 
-            <!-- apache commons -->
-            <dependency>
-                <groupId>commons-beanutils</groupId>
-                <artifactId>commons-beanutils</artifactId>
-            </dependency>
-            <dependency>
-                <groupId>commons-lang</groupId>
-                <artifactId>commons-lang</artifactId>
-            </dependency>
-            <dependency>
-                <groupId>commons-dbcp</groupId>
-                <artifactId>commons-dbcp</artifactId>
-            </dependency>
- 			
- 			<!-- 解决jdk8字节码问题 -->
-            <dependency>
-				<groupId>org.javassist</groupId>
-				<artifactId>javassist</artifactId>
-			</dependency>
-			
-			<!-- POI Export Excel -->
-        	<dependency>
-		    	<groupId>org.apache.poi</groupId>
-		    	<artifactId>poi-ooxml</artifactId>
-	   		</dependency>
-			
-            <!-- log4j & slf4j -->
-            <dependency>
-                <groupId>log4j</groupId>
-                <artifactId>log4j</artifactId>
-                <exclusions>
-                    <exclusion>
-                        <groupId>javax.mail</groupId>
-                        <artifactId>mail</artifactId>
-                    </exclusion>
-                    <exclusion>
-                        <groupId>javax.jms</groupId>
-                        <artifactId>jms</artifactId>
-                    </exclusion>
-                    <exclusion>
-                        <groupId>com.sun.jdmk</groupId>
-                        <artifactId>jmxtools</artifactId>
-                    </exclusion>
-                    <exclusion>
-                        <groupId>com.sun.jmx</groupId>
-                        <artifactId>jmxri</artifactId>
-                    </exclusion>
-                    <exclusion>
-                        <groupId>oro</groupId>
-                        <artifactId>oro</artifactId>
-                    </exclusion>
-                </exclusions>
-            </dependency>
-            <dependency>
-                <groupId>org.slf4j</groupId>
-                <artifactId>slf4j-api</artifactId>
-            </dependency>
-	  		<dependency>
-				<groupId>javax.validation</groupId>
-				<artifactId>validation-api</artifactId>
-			</dependency>
-	  		<dependency>
-				<groupId>javax.annotation</groupId>
-				<artifactId>javax.annotation-api</artifactId>
-			</dependency>
-			<dependency>
-		   		<groupId>junit</groupId>
-		   		<artifactId>junit</artifactId>
-	   		</dependency>
-	   		<dependency>
-			   <groupId>org.sitemesh</groupId>
-			   <artifactId>sitemesh</artifactId>
-			</dependency>
-			
-			
-			<dependency>
-            	<groupId>com.fasterxml.jackson.core</groupId>
-            	<artifactId>jackson-core</artifactId>
-        	</dependency>
-        	<dependency>
-            	<groupId>com.fasterxml.jackson.core</groupId>
-            	<artifactId>jackson-databind</artifactId>
-        	</dependency>
-        	<dependency>
-            	<groupId>com.fasterxml.jackson.core</groupId>
-            	<artifactId>jackson-annotations</artifactId>
-        	</dependency>
-        	<dependency>
-                <groupId>org.hibernate</groupId>
-                <artifactId>hibernate-validator</artifactId>
-            </dependency>
-        </dependencies> 
+		<!-- mysql -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+		</dependency>
+
+		<!-- fastJson -->
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>fastjson</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>servlet-api</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet.jsp</groupId>
+			<artifactId>jsp-api</artifactId>
+			<scope>provided</scope>
+		</dependency>
+
+		<!-- apache commons -->
+		<dependency>
+			<groupId>commons-beanutils</groupId>
+			<artifactId>commons-beanutils</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>commons-lang</groupId>
+			<artifactId>commons-lang</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>commons-dbcp</groupId>
+			<artifactId>commons-dbcp</artifactId>
+		</dependency>
+
+		<!-- 解决jdk8字节码问题 -->
+		<dependency>
+			<groupId>org.javassist</groupId>
+			<artifactId>javassist</artifactId>
+		</dependency>
+
+		<!-- POI Export Excel -->
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-ooxml</artifactId>
+		</dependency>
+
+		<!-- log4j & slf4j -->
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<exclusions>
+				<exclusion>
+					<groupId>javax.mail</groupId>
+					<artifactId>mail</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>javax.jms</groupId>
+					<artifactId>jms</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>com.sun.jdmk</groupId>
+					<artifactId>jmxtools</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>com.sun.jmx</groupId>
+					<artifactId>jmxri</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>oro</groupId>
+					<artifactId>oro</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>javax.validation</groupId>
+			<artifactId>validation-api</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>javax.annotation</groupId>
+			<artifactId>javax.annotation-api</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.sitemesh</groupId>
+			<artifactId>sitemesh</artifactId>
+		</dependency>
+
+
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-core</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-annotations</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-validator</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.sharemenus</groupId>
+			<artifactId>sharemenus-api</artifactId>
+			<version>${sharemenus.api.version}</version>
+		</dependency>
+		<dependency>
+            <groupId>org.apache.zookeeper</groupId>
+            <artifactId>zookeeper</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.github.sgroschupf</groupId>
+            <artifactId>zkclient</artifactId>
+        </dependency>
+	</dependencies>
+	<build>
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+				<filtering>true</filtering>
+			</resource>
+		</resources>
+		<plugins>
+			<plugin>
+				<artifactId>maven-resources-plugin</artifactId>
+				<version>2.5</version>
+				<configuration>
+					<encoding>${build.file.encoding}</encoding>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+	<profiles>
+		<!-- 开发环境 -->
+		<profile>
+			<id>dev</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<properties>
+				<!-- log configuration -->
+				<mvn.log.path>logs</mvn.log.path>
+				<mvn.log.level>DEBUG</mvn.log.level>
+
+				<!-- dubbo configuration -->
+				<mvn.application.name>bone</mvn.application.name>
+				<mvn.dubbo.protocol>zookeeper</mvn.dubbo.protocol>
+				<mvn.dubbo.address>127.0.0.1:2181</mvn.dubbo.address>
+				<mvn.dubbo.port>11000</mvn.dubbo.port>
+				<!-- <mvn.dubbo.address>192.168.2.18:2181</mvn.dubbo.address> -->
+				<mvn.dubbo.environment>develop</mvn.dubbo.environment>
+			</properties>
+		</profile>
+
+		<!-- 测试环境 -->
+		<profile>
+			<id>test</id>
+			<properties>
+				<!-- log configuration -->
+				<mvn.log.path>logs</mvn.log.path>
+				<mvn.log.level>INFO</mvn.log.level>
+
+				<!-- dubbo configuration -->
+				<mvn.application.name>bone</mvn.application.name>
+				<mvn.dubbo.protocol>zookeeper</mvn.dubbo.protocol>
+				<mvn.dubbo.address>192.168.2.18:2181</mvn.dubbo.address>
+				<mvn.dubbo.environment>test</mvn.dubbo.environment>
+			</properties>
+		</profile>
+
+		<!-- 生产环境 -->
+		<profile>
+			<id>production</id>
+			<properties>
+				<!-- log configuration -->
+				<mvn.log.path>logs</mvn.log.path>
+				<mvn.log.level>WARN</mvn.log.level>
+
+				<!-- dubbo configuration -->
+				<mvn.application.name>bone</mvn.application.name>
+				<mvn.dubbo.protocol>zookeeper</mvn.dubbo.protocol>
+				<mvn.dubbo.address>192.168.2.18:2181</mvn.dubbo.address>
+				<mvn.dubbo.environment>product</mvn.dubbo.environment>
+			</properties>
+		</profile>
+	</profiles>
 </project>
