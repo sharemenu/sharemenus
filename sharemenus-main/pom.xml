@@ -172,33 +172,12 @@
                 <!-- <mvn.dubbo.address>192.168.2.18:2181</mvn.dubbo.address> -->
                 <mvn.dubbo.environment>develop</mvn.dubbo.environment>
 
-                <!-- rocketMQ configuration -->
-                <mvn.mq.nameserver>192.168.56.102:9876</mvn.mq.nameserver>
-                <mvn.mq.timeout>2000</mvn.mq.timeout>
-                <mvn.mq.addOrderTopic>addOrderTopic</mvn.mq.addOrderTopic>
-                <mvn.mq.deleteOrderTopic>deleteOrderTopic</mvn.mq.deleteOrderTopic>
-                <mvn.mq.addOrderSubExp>*</mvn.mq.addOrderSubExp>
-                <mvn.mq.deleteOrderSubExp>*</mvn.mq.deleteOrderSubExp>
-
-                <!-- redis configuration -->
-                <mvn.redis.maxTotal>1000</mvn.redis.maxTotal>
-                <mvn.redis.maxIdle>10</mvn.redis.maxIdle>
-                <mvn.redis.minIdle>1</mvn.redis.minIdle>
-                <mvn.redis.maxWaitMillis>30000</mvn.redis.maxWaitMillis>
-                <mvn.redis.testOnBorrow>true</mvn.redis.testOnBorrow>
-                <mvn.redis.testOnReturn>true</mvn.redis.testOnReturn>
-                <mvn.redis.testWhileIdle>true</mvn.redis.testWhileIdle>
-               <!--  <mvn.redis.ip>192.168.56.102</mvn.redis.ip> -->
-                <mvn.redis.ip>127.0.0.1</mvn.redis.ip>
-                <mvn.redis.port>6379</mvn.redis.port>
-                <mvn.redis.timeout>1000</mvn.redis.timeout>
-
                 <!-- jdbc configuration -->
                 <mvn.jdbc.driver>com.mysql.jdbc.Driver</mvn.jdbc.driver>
-                <mvn.jdbc.url>jdbc:mysql://192.168.1.160:3306/tms_basic</mvn.jdbc.url>
+                <mvn.jdbc.url>jdbc:mysql://127.0.0.1:3306/test</mvn.jdbc.url>
                 <mvn.jdbc.connectionProperties>useUnicode=true;autoReconnect=true;failOverReadOnly=false;characterEncoding=utf8;zeroDateTimeBehavior=convertToNull;allowMultiQueries=true</mvn.jdbc.connectionProperties>
-                <mvn.jdbc.username>meixiansong_tms_rw</mvn.jdbc.username>
-                <mvn.jdbc.password>meixiansong</mvn.jdbc.password>
+                <mvn.jdbc.username>root</mvn.jdbc.username>
+                <mvn.jdbc.password>zwlzwl</mvn.jdbc.password>
 
                 <!-- dbcp configuration -->
                 <mvn.dbcp.initialSize>5</mvn.dbcp.initialSize>

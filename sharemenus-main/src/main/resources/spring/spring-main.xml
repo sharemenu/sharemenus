@@ -17,6 +17,7 @@
 	        </property>
 	    </bean>
  
+ 		<import resource="classpath:spring/spring-dao.xml"/>
 	    <import resource="classpath:spring/spring-dubbo.xml"/>
 	    <import resource="classpath:spring/spring-publish.xml"/>
 	 

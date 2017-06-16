@@ -14,93 +14,17 @@
         <setting name="cacheEnabled" value="false" />
         <setting name="defaultExecutorType" value="REUSE" />
     </settings>
-    <typeHandlers>
-        <typeHandler handler="com.sprucetec.bone.common.dao.handler.ValueEnumTypeHandler"
-                             javaType="com.sprucetec.tms.basic.base.enums.Gender" jdbcType="TINYINT" />
-    </typeHandlers>
-    <plugins>
-        <plugin interceptor="com.sprucetec.bone.common.dao.pagebatis.PageInterceptor">
-            <!--<property name="dialectType" value="com.sprucetec.bone.common.dao.pagebatis.MySQLDialect" />-->
-            <property name="dialectType" value="com.sprucetec.tms.basic.utils.XFMySQLDialect" />
-        </plugin>
-    </plugins>
+<!--     <typeHandlers> -->
+<!--         <typeHandler handler="com.sprucetec.bone.common.dao.handler.ValueEnumTypeHandler" -->
+<!--                              javaType="com.sprucetec.tms.basic.base.enums.Gender" jdbcType="TINYINT" /> -->
+<!--     </typeHandlers> -->
+<!--     <plugins> -->
+<!--         <plugin interceptor="com.sprucetec.bone.common.dao.pagebatis.PageInterceptor"> -->
+<!--             <property name="dialectType" value="com.sprucetec.bone.common.dao.pagebatis.MySQLDialect" /> -->
+<!--             <property name="dialectType" value="com.sprucetec.tms.basic.utils.XFMySQLDialect" /> -->
+<!--         </plugin> -->
+<!--     </plugins> -->
     <mappers>
-        <mapper resource="mapper/driver/DriverMapper.xml" />
-        <mapper resource="mapper/driverorg/DriverOrgRelationMapper.xml" />
-        <mapper resource="mapper/driver/OperationDriverMapper.xml" />
-        <!--<mapper resource="mapper/driver/DriverGeoMapper.xml" />-->
-        <mapper resource="mapper/mysql/scheduleTaskMapper.xml" />
-        <mapper resource="mapper/user/UserMapper.xml" />
-        <mapper resource="mapper/user/UserRoleMapper.xml" />
-        <mapper resource="mapper/car/CarMapper.xml" />
-        <mapper resource="mapper/car/OilcardUsageMapper.xml" />
-        <mapper resource="mapper/cartype/CarTypeMapper.xml" />
-        <mapper resource="mapper/company/CompanyMapper.xml" />
-        <mapper resource="mapper/company/CompanySendAddressMapper.xml" />
-        <mapper resource="mapper/site/SiteMapper.xml" />
-        <mapper resource="mapper/dictionary/DictionaryMapper.xml" />
-        <mapper resource="mapper/code/CodeMapper.xml" />
-		
-        <mapper resource="mapper/region/RegionMapper.xml" />
-        <mapper resource="mapper/region/RegionDriverMapper.xml" />
-        <mapper resource="mapper/region/RegionStationRegionMapper.xml" />
-        <mapper resource="mapper/region/RegionWarehouseMapper.xml" />		
-        <mapper resource="mapper/stationregion/StationRegionMapper.xml" />
-        <mapper resource="mapper/stationregion/StationRegionWarehouseMapper.xml" />		
-        <mapper resource="mapper/warehouse/WarehouseMapper.xml" />
-        <mapper resource="mapper/warehouse/WarehouseCityMapper.xml" />
-        <mapper resource="mapper/distservice/DistserviceMapper.xml" />
-        <mapper resource="mapper/distservice/DistserviceRangeMapper.xml" />
-        <mapper resource="mapper/distservice/BatchMapper.xml" />
-        <mapper resource="mapper/distservice/BatchConfigMapper.xml" />
-        <mapper resource="mapper/distservice/BatchConfigAuditTaskMapper.xml" />
-        <mapper resource="mapper/distservice/BatchConfigRangeMapper.xml" />
-        <mapper resource="mapper/route/DistributeMapper.xml" />
-        <mapper resource="mapper/route/TransportMapper.xml" />
-        <mapper resource="mapper/asynch/AsynchMqLogMapper.xml" />
-        <mapper resource="mapper/deliverer/DelivererMapper.xml" />
-        <mapper resource="mapper/deliverer/DeliveryLevelPermissionMapper.xml" />
-        <mapper resource="mapper/route/TransRouteDestMapper.xml" />
-		
-        <mapper resource="mapper/loadrate/LoadRateMapper.xml" />
-        <mapper resource="mapper/app/AppVersionMapper.xml" />
-
-        <mapper resource="mapper/customer/CustomerMapper.xml" />
-        <mapper resource="mapper/customer/CustomerDelivererMapper.xml" />
-        <mapper resource="mapper/customer/CustomerDelivererLogMapper.xml" />
-        <mapper resource="mapper/customer/CustomerLevelHistoryMapper.xml" />
-        <mapper resource="mapper/customer/CustomerKeysMapper.xml" />
-        <mapper resource="mapper/customer/CustomerKeysLogMapper.xml" />
-        <mapper resource="mapper/customer/CustomerApplyKeysMapper.xml" />
-        <mapper resource="mapper/customer/CustomerLabelMapper.xml" />
-
-        <mapper resource="mapper/print/PrintServiceMapper.xml"/>
-        <mapper resource="mapper/print/PrintTemplateMapper.xml"/>
-        <mapper resource="mapper/print/PrintServicePrinterMapper.xml"/>
-        <mapper resource="mapper/print/PrinterMapper.xml"/>
-
-        <mapper resource="mapper/conqrcode/ConqrcodeMapper.xml"/>
-		
-        <mapper resource="mapper/menu/MenuMapper.xml"/>
-        <mapper resource="mapper/vehicleRestrictionRuleMapper.xml"/>
-
-        <!-- 班排长 -->
-        <mapper resource="mapper/ophistory/BasicOpHistoryMapper.xml" />
-        <mapper resource="mapper/businessuser/BusinessUserMapper.xml" />
-        <mapper resource="mapper/platoonsquad/PlatoonSquadMapper.xml" />
-        <mapper resource="mapper/squadstation/SquadStationMapper.xml" />
-        <!-- 短信模版 -->
-        <mapper resource="mapper/smsTemplate/SmsTemplateMapper.xml" />
-
-        <!--自动化计算运费规则-->
-        <mapper resource="mapper/autocomputefee/FeeCalculateRuleMapper.xml" />
-        <mapper resource="mapper/autocomputefee/FeeConfigBatchMapper.xml" />
-
-        <!-- 优惠券 -->
-        <mapper resource="mapper/coupon/CouponMapper.xml" />
-        <mapper resource="mapper/approval/CompensateApprovalMapper.xml" />
-        <!-- 积分排车 -->
-        <mapper resource="mapper/car/DriverScoreRuleResultMapper.xml" />
-        <mapper resource="mapper/car/DriverScoreRuleResultHistoryMapper.xml" />
+        <mapper resource="mapper/test/TestMapper.xml" />
 	</mappers>
 </configuration>

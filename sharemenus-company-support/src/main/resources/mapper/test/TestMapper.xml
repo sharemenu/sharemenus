@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.sharemenu.company.dao.TestDao" >
+  <resultMap id="BaseResultMap" type="com.sharemenu.company.entity.TestEntity" >
+    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="age" property="age" jdbcType="INTEGER" />
+  </resultMap>
+  
+  <sql id="Base_Column_List">
+ 	 name,age
+  </sql>
+  
+  <select id="getTestEntityList" resultMap="BaseResultMap">
+	SELECT 
+	<include refid="Base_Column_List"></include>
+	FROM `test_table`  
+  </select>
+  
+</mapper>
